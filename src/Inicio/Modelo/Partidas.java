@@ -10,13 +10,14 @@ public class Partidas {
     private FileReader fr;
     private FileWriter fw;
 
-    private String nombres[] = new String[10];
+    private String nombres[][] = new String[10][2];
     private String puntos[][] = new String[10][2];
 
     public Partidas() {
 
 
     }
+
 
     public void convertirHistorialEnArray(String archivo) {
 
@@ -30,7 +31,11 @@ public class Partidas {
         for (int i=0;i<KeyValue.length;i++) {
 
             if (i%2 == 0) {
-                nombres[contadorKey] = KeyValue[i];
+                String []valor = KeyValue[i].split("-");
+
+                for (int z=0; z<valor.length; z++) {//Me guarda en puntos[el contadorValue, que llega a las 10 partidas]
+                    nombres[contadorKey][z] = valor[z];//[0 = nombre1 y 1 = nombre2]
+                }
                 contadorKey++;
             } else if (i%2 != 0) {
                 String []valor = KeyValue[i].split("-");
@@ -134,17 +139,18 @@ public class Partidas {
     //GETTERS-----SETTERS-------------------
 
 
-    public String[] getNombres() {
-        return nombres;
-    }
-    public void setNombres(String[] nombres) {
-        this.nombres = nombres;
-    }
+
     public String[][] getPuntos() {
         return puntos;
     }
     public void setPuntos(String[][] puntos) {
         this.puntos = puntos;
+    }
+    public String[][] getNombres() {
+        return nombres;
+    }
+    public void setNombres(String[][] nombres) {
+        this.nombres = nombres;
     }
 
 

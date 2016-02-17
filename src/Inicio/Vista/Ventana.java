@@ -33,8 +33,8 @@ public class Ventana extends JFrame {
         add(botonesPanel,BorderLayout.SOUTH);
 
         //JPanel Contador.
+        principalPanel.setLayout(new GridLayout(0,2));
         add(principalPanel,BorderLayout.CENTER);
-        principalPanel.setBackground(Color.red);
 
 
 
@@ -42,6 +42,49 @@ public class Ventana extends JFrame {
 
 
     }
+
+    public void configurarContadorPanel(String nombresJugadores[],String puntos[]) {
+
+        String nombreJ1 = nombresJugadores[0];
+        String nombreJ2 = nombresJugadores[1];
+        String puntoJ1 = puntos[0];
+        String puntoJ2 = puntos[1];
+
+        //Creo los 3 paneles.
+        JPanel jugador1Panel = new JPanel();
+        JPanel jugador2Panel = new JPanel();
+        JPanel botonesPanel = new JPanel();
+
+        //Le pongo borde a los paneles de los jugadores.
+        jugador1Panel.setBorder(BorderFactory.createTitledBorder(nombreJ1));
+        jugador2Panel.setBorder(BorderFactory.createTitledBorder(nombreJ2));
+
+        //Añado los paneles 3 paneles al panel principal.
+        datosPanel.add(jugador1Panel);
+        datosPanel.add(jugador2Panel);
+        datosPanel.add(botonesPanel);
+
+        //Creo las 2 cajas para cada jugador.
+        Box box1 = Box.createVerticalBox();
+        Box box2 = Box.createVerticalBox();
+
+        //Creo los labels con los puntajes de c/u.
+        JLabel label1 = new JLabel(puntoJ1);
+        JLabel label2 = new JLabel(puntoJ2);
+
+        //Añado a las cajas su respectivo label.
+        box1.add(label1);
+        box2.add(label2);
+
+        //Añado a cada panel su respectiva caja.
+        jugador1Panel.add(box1);
+        jugador2Panel.add(box2);
+
+        principalPanel.add(jugador1Panel);
+        principalPanel.add(jugador2Panel);
+    }
+
+
 
     public void agregarBotones(String []nombres,ActionListener a) {
 
@@ -58,13 +101,15 @@ public class Ventana extends JFrame {
 
     }
 
-    public void agregarRadios(String []nombres,ActionListener a){
+    public void agregarRadios(String [][]nombres,ActionListener a){
 
         for (int i=0;i<nombres.length; i++) {
 
-            JRadioButton r = new JRadioButton(nombres[i]);
+            JRadioButton r = new JRadioButton(nombres[i][0] + "." + nombres[i][1]);
 
             r.addActionListener(a);
+
+            r.setActionCommand("Radio"+i);
 
             grupo.add(r);
             box.add(r);
