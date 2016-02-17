@@ -82,6 +82,8 @@ public class Ventana extends JFrame {
 
         principalPanel.add(jugador1Panel);
         principalPanel.add(jugador2Panel);
+
+        principalPanel.updateUI();
     }
 
 
@@ -110,6 +112,8 @@ public class Ventana extends JFrame {
             r.addActionListener(a);
 
             r.setActionCommand("Radio"+i);
+
+            System.out.println(r.getActionCommand());
 
             grupo.add(r);
             box.add(r);
