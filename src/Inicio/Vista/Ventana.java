@@ -1,8 +1,10 @@
 package Inicio.Vista;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 /**
  * Created by MatiEzelQ on 15/2/16.
@@ -12,12 +14,32 @@ public class Ventana extends JFrame {
     private static final int ALTO = 1200;
     private static final int ANCHO = 720;
 
-    JPanel datosPanel = new JPanel();
+    ButtonGroup grupo = new ButtonGroup();
+
+    //LA LAMINA PRINCIPAL DEL JUEGO, CONTIENE LA OTRAS 3 LAMINAS
     JPanel principalPanel = new JPanel();
+    //Creo los 3 paneles. + 2 boxes para cada jugador.
+    JPanel jugador1Panel = new JPanel();
+    JPanel jugador2Panel = new JPanel();
+
+    Box boxJ1 = Box.createVerticalBox();
+    Box boxJ2 = Box.createVerticalBox();
+
+    //LA LAMINA DE DATOS DEL JUEGO, CONTIENE 2 BOXES Y BOTONES.
+    JPanel datosPanel = new JPanel();
+
+    Box boxPrincipal= Box.createVerticalBox();
+    Box boxRadios = Box.createVerticalBox();
+
+    JButton sumar = new JButton("Sumar");
+    JTextField valor = new JTextField();
+    JButton restar = new JButton("Restar");
+
+
+
+    //LA LAMINA DE LOS BOTONES DEL JUEGO, CONTIENE LOS 3 BOTONES.
     JPanel botonesPanel = new JPanel();
 
-    Box box = Box.createVerticalBox();
-    ButtonGroup grupo = new ButtonGroup();
 
     public Ventana() {
         setTitle("La papa. El contador");
@@ -27,7 +49,12 @@ public class Ventana extends JFrame {
 
         //JPanel Datos.
         add(datosPanel,BorderLayout.WEST);
-        datosPanel.add(box);
+
+        boxPrincipal.add(new JLabel("Historial"));
+        datosPanel.add(Box.createVerticalStrut(20));
+        boxPrincipal.add(boxRadios);
+
+        datosPanel.add(boxPrincipal);
 
         //JPanel botones.
         add(botonesPanel,BorderLayout.SOUTH);
@@ -36,57 +63,51 @@ public class Ventana extends JFrame {
         principalPanel.setLayout(new GridLayout(0,2));
         add(principalPanel,BorderLayout.CENTER);
 
-
-
-        //Radios
-
-
-    }
-
-    public void configurarContadorPanel(String nombresJugadores[],String puntos[]) {
-
-        String nombreJ1 = nombresJugadores[0];
-        String nombreJ2 = nombresJugadores[1];
-        String puntoJ1 = puntos[0];
-        String puntoJ2 = puntos[1];
-
-        //Creo los 3 paneles.
-        JPanel jugador1Panel = new JPanel();
-        JPanel jugador2Panel = new JPanel();
-        JPanel botonesPanel = new JPanel();
-
-        //Le pongo borde a los paneles de los jugadores.
-        jugador1Panel.setBorder(BorderFactory.createTitledBorder(nombreJ1));
-        jugador2Panel.setBorder(BorderFactory.createTitledBorder(nombreJ2));
-
-        //Añado los paneles 3 paneles al panel principal.
-        datosPanel.add(jugador1Panel);
-        datosPanel.add(jugador2Panel);
-        datosPanel.add(botonesPanel);
-
-        //Creo las 2 cajas para cada jugador.
-        Box box1 = Box.createVerticalBox();
-        Box box2 = Box.createVerticalBox();
-
-        //Creo los labels con los puntajes de c/u.
-        JLabel label1 = new JLabel(puntoJ1);
-        JLabel label2 = new JLabel(puntoJ2);
-
-        //Añado a las cajas su respectivo label.
-        box1.add(label1);
-        box2.add(label2);
-
-        //Añado a cada panel su respectiva caja.
-        jugador1Panel.add(box1);
-        jugador2Panel.add(box2);
+        jugador1Panel.add(boxJ1);
+        jugador2Panel.add(boxJ2);
 
         principalPanel.add(jugador1Panel);
         principalPanel.add(jugador2Panel);
 
+    }
+
+    public void configurarValoresDeJugadores(String nombres[],String puntos[]) {
+
+        boxJ1.removeAll();
+        boxJ2.removeAll();
+
+
+
+        boxJ1.add(new JLabel(puntos[0]));
+        boxJ2.add(new JLabel(puntos[1]));
+
+        jugador1Panel.setBorder(BorderFactory.createTitledBorder(nombres[0]));
+        jugador2Panel.setBorder(BorderFactory.createTitledBorder(nombres[1]));
+
+
+        jugador2Panel.updateUI();
+        jugador1Panel.updateUI();
         principalPanel.updateUI();
     }
 
+    public void vaciarCajasDeJugadores() {
 
+        boxJ1.removeAll();
+        boxJ2.removeAll();
+
+    }
+
+    public void actualizarPuntos(ArrayList<String> puntos1,ArrayList<String> puntos2) {
+
+        for (int i=0; i<puntos1.size(); i++) {
+
+            boxJ1.add(new JLabel(puntos1.get(i)));
+            boxJ2.add(new JLabel(puntos2.get(i)));
+
+        }
+
+
+    }
 
     public void agregarBotones(String []nombres,ActionListener a) {
 
@@ -105,6 +126,8 @@ public class Ventana extends JFrame {
 
     public void agregarRadios(String [][]nombres,ActionListener a){
 
+        boxRadios.removeAll();
+
         for (int i=0;i<nombres.length; i++) {
 
             JRadioButton r = new JRadioButton(nombres[i][0] + "." + nombres[i][1]);
@@ -113,15 +136,52 @@ public class Ventana extends JFrame {
 
             r.setActionCommand("Radio"+i);
 
-            System.out.println(r.getActionCommand());
-
             grupo.add(r);
-            box.add(r);
+            boxRadios.add(r);
         }
+
+
+
 
     }
 
-   /* public void agregarPanelDatos() {
+
+    public void agregarCalculo(String nombre[],ActionListener a) {
+
+        boxPrincipal.add(restar);
+        boxPrincipal.add(valor);
+        boxPrincipal.add(sumar);
+
+        restar.addActionListener(a);
+        sumar.addActionListener(a);
+
+        JRadioButton j1 = new JRadioButton(nombre[0]);
+        JRadioButton j2 = new JRadioButton(nombre[1]);
+
+        j1.setActionCommand("RadioJugadorUno");
+        j2.setActionCommand("RadioJugadorDos");
+
+        boxPrincipal.add(j1);
+        boxPrincipal.add(j2);
+
+
+
+    }
+
+    public void actualizarUI() {
+
+        principalPanel.updateUI();
+        datosPanel.updateUI();
+        botonesPanel.updateUI();
+
+    }
+
+
+    public String getValor() {
+        return valor.getText();
+    }
+
+    /* public void agregarPanelDatos() {
         JPanel panel = new JPanel();
         this.add(panel);
         //podría meterle datos de hora jugadas y todo eso. en un txt.

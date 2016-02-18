@@ -1,6 +1,7 @@
 package Inicio.Modelo;
 
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  * Created by MatiEzelQ on 15/2/16.
@@ -10,14 +11,16 @@ public class Partidas {
     private FileReader fr;
     private FileWriter fw;
 
+    String radioSeleccionado = "nil";
+
     private String nombres[][] = new String[10][2];
     private String puntos[][] = new String[10][2];
 
-    public Partidas() {
+    private ArrayList<String> puntosAcumuladosJ1 = new ArrayList<String>();
+    private ArrayList<String> puntosAcumuladosJ2 = new ArrayList<String>();
 
-
-    }
-
+    private String radioSeleccionadoCalculo = "nil";
+    private String valorActual[] = new String[2];
 
     public void convertirHistorialEnArray(String archivo) {
 
@@ -152,6 +155,47 @@ public class Partidas {
     public void setNombres(String[][] nombres) {
         this.nombres = nombres;
     }
+
+    public String getRadioSeleccionado() {
+        return radioSeleccionado;
+    }
+    public void setRadioSeleccionado(String radioSeleccionado) {
+        this.radioSeleccionado = radioSeleccionado;
+    }
+
+    public String[] getValorActual() {
+        return valorActual;
+    }
+    public void setValorActual(String[] valorActual) {
+        this.valorActual = valorActual;
+    }
+
+    public String getRadioSeleccionadoCalculo() {
+        return radioSeleccionadoCalculo;
+    }
+    public void setRadioSeleccionadoCalculo(String radioSeleccionadoCalculo) {
+        this.radioSeleccionadoCalculo = radioSeleccionadoCalculo;
+    }
+
+    public ArrayList<String> getPuntosAcumuladosJ2() {
+        return puntosAcumuladosJ2;
+    }
+    public void setPuntosAcumuladosJ2(ArrayList<String> puntosAcumuladosJ2) {
+        this.puntosAcumuladosJ2 = puntosAcumuladosJ2;
+    }
+    public ArrayList<String> getPuntosAcumuladosJ1() {
+        return puntosAcumuladosJ1;
+    }
+    public void setPuntosAcumuladosJ1(ArrayList<String> puntosAcumuladosJ1) {
+        this.puntosAcumuladosJ1 = puntosAcumuladosJ1;
+    }
+
+
+
+
+
+
+
 
 
 

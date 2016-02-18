@@ -21,8 +21,6 @@ public class Gestor {
 
     private GestorEventos gestor = new GestorEventos();
 
-    String radioSeleccionado = "nil";
-
     public Gestor(Ventana v, Partidas p) {
         view = v;
         play = p;
@@ -37,16 +35,18 @@ public class Gestor {
         this.nombres = play.getNombres();
         this.puntos = play.getPuntos();
 
-        view.configurarContadorPanel(nombres[0],puntos[0]);
-
         view.agregarRadios(nombres,gestor);
         view.agregarBotones(botones,gestor);
 
+        view.configurarValoresDeJugadores(nombres[0],puntos[0]);
 
+        view.agregarCalculo(nombres[0],gestor);
 
+        play.getPuntosAcumuladosJ1().add("213");
+        play.getPuntosAcumuladosJ1().add("285");
 
-
-
+        play.getPuntosAcumuladosJ2().add("482");
+        play.getPuntosAcumuladosJ2().add("9241");
     }
 
 
@@ -58,25 +58,29 @@ public class Gestor {
             //RadioButtonSeleccionado.
 
             if (name.equals("Radio0")) {
-                radioSeleccionado = "Radio0";
+                play.setRadioSeleccionado("Radio0");
             } else if (name.equals("Radio1")) {
-                radioSeleccionado = "Radio1";
+                play.setRadioSeleccionado("Radio1");
             } else if (name.equals("Radio2")) {
-                radioSeleccionado = "Radio2";
+                play.setRadioSeleccionado("Radio2");
             } else if (name.equals("Radio3")) {
-                radioSeleccionado = "Radio3";
+                play.setRadioSeleccionado("Radio3");
             } else if (name.equals("Radio4")) {
-                radioSeleccionado = "Radio4";
+                play.setRadioSeleccionado("Radio4");
             } else if (name.equals("Radio5")) {
-                radioSeleccionado = "Radio5";
+                play.setRadioSeleccionado("Radio5");
             } else if (name.equals("Radio6")) {
-                radioSeleccionado = "Radio6";
+                play.setRadioSeleccionado("Radio6");
             } else if (name.equals("Radio7")) {
-                radioSeleccionado = "Radio7";
+                play.setRadioSeleccionado("Radio7");
             } else if (name.equals("Radio8")) {
-                radioSeleccionado = "Radio8";
+                play.setRadioSeleccionado("Radio8");
             } else if (name.equals("Radio9")) {
-                radioSeleccionado = "Radio9";
+                play.setRadioSeleccionado("Radio9");
+            } else if (name.equals("RadioJugadorUno")) {
+                play.setRadioSeleccionadoCalculo("RadioJugadorUno");
+            } else if (name.equals("RadioJugadorDos")) {
+                play.setRadioSeleccionadoCalculo("RadioJugadorDos");
             }
 
 
@@ -92,48 +96,69 @@ public class Gestor {
 
             } else if (name == botones[2]) {
 
-               if (radioSeleccionado.equals("Radio0")) {
+               if (play.getRadioSeleccionado().equals("Radio0")) {
 
-                   view.configurarContadorPanel(nombres[0],puntos[0]);
+                   view.configurarValoresDeJugadores(nombres[0],puntos[0]);
 
-               }  else if (radioSeleccionado.equals("Radio1")) {
-                   System.out.println("ok");
-                   view.configurarContadorPanel(nombres[1],puntos[1]);
+               }  else if (play.getRadioSeleccionado().equals("Radio1")) {
 
-               } else if (radioSeleccionado.equals("Radio2")) {
+                   view.configurarValoresDeJugadores(nombres[1],puntos[1]);
 
-                   view.configurarContadorPanel(nombres[2],puntos[2]);
+               } else if (play.getRadioSeleccionado().equals("Radio2")) {
 
-               } else if (radioSeleccionado.equals("Radio3")) {
+                   view.configurarValoresDeJugadores(puntos[2],nombres[2]);
 
-                   view.configurarContadorPanel(nombres[0],puntos[0]);
+               } else if (play.getRadioSeleccionado().equals("Radio3")) {
 
-               } else if (radioSeleccionado.equals("Radio4")) {
+                   view.configurarValoresDeJugadores(puntos[3],nombres[3]);
 
-                   view.configurarContadorPanel(nombres[0],puntos[0]);
+               } else if (play.getRadioSeleccionado().equals("Radio4")) {
 
-               } else if (radioSeleccionado.equals("Radio5")) {
-                    radioSeleccionado = "Radio6";
-               } else if (radioSeleccionado.equals("Radio6")) {
-                    radioSeleccionado = "Radio7";
-               } else if (radioSeleccionado.equals("Radio7")) {
-                    radioSeleccionado = "Radio8";
-               } else if (radioSeleccionado.equals("Radio8")) {
-                    radioSeleccionado = "Radio9";
-               } else if (radioSeleccionado.equals("Radio9")) {
-                    radioSeleccionado = "Radio10";
+                   view.configurarValoresDeJugadores(puntos[4],nombres[4]);
+
+               } else if (play.getRadioSeleccionado().equals("Radio5")) {
+
+               } else if (play.getRadioSeleccionado().equals("Radio6")) {
+
+               } else if (play.getRadioSeleccionado().equals("Radio7")) {
+
+               } else if (play.getRadioSeleccionado().equals("Radio8")) {
+
+               } else if (play.getRadioSeleccionado().equals("Radio9")) {
+
                }
 
 
 
-            } else {
+            } else if (name.equals("Sumar")) {
+                if (!play.getRadioSeleccionado().equals("nil")) {
+                    if (play.getRadioSeleccionadoCalculo().equals("RadioJugadorUno")) {
+                        int size = play.getPuntosAcumuladosJ1().size();
+                        String ultimoValor = play.getPuntosAcumuladosJ1().get(size);
+                        String valorIntroducido = view.getValor();
+
+                        String nuevoValor = (Integer.parseInt(valorIntroducido) + Integer.parseInt(ultimoValor)) + "";
+
+                        play.getPuntosAcumuladosJ1().add(nuevoValor);
+
+                        view.actualizarUI();
+                    } else if (play.getRadioSeleccionadoCalculo().equals("RadioJugadorDos")) {
+
+                    } else {
+
+                    }
+                } else {
+                    System.out.println("Debes seleccionar una partida.");
+                }
+
+            } else if (name.equals("Restar")) {
 
             }
 
 
 
 
-
+            view.actualizarPuntos(play.getPuntosAcumuladosJ1(),play.getPuntosAcumuladosJ2());
 
         }
 

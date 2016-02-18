@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35ad3c10-ff00-4d36-8809-d1abf821a9a3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Propio" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Inicio/Modelo/Matias-Miguel.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/laPapa/Inicio/Controlador/Gestor$GestorEventos.class" afterPath="$PROJECT_DIR$/out/production/laPapa/Inicio/Controlador/Gestor$GestorEventos.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/laPapa/Inicio/Controlador/Gestor.class" afterPath="$PROJECT_DIR$/out/production/laPapa/Inicio/Controlador/Gestor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/laPapa/Inicio/Modelo/Partidas.class" afterPath="$PROJECT_DIR$/out/production/laPapa/Inicio/Modelo/Partidas.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/laPapa/Inicio/Vista/Ventana.class" afterPath="$PROJECT_DIR$/out/production/laPapa/Inicio/Vista/Ventana.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/laPapa/Inicio/Modelo/Historial.txt" afterPath="$PROJECT_DIR$/out/production/laPapa/Inicio/Modelo/Historial.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java" afterPath="$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt" afterPath="$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java" afterPath="$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Inicio/Vista/Ventana.java" afterPath="$PROJECT_DIR$/src/Inicio/Vista/Ventana.java" />
     </list>
     <ignored path="laPapa.iws" />
@@ -29,21 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Inicio/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Gestor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,10 +49,12 @@
       <file leaf-file-name="Ventana.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Inicio/Vista/Ventana.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5804597">
-              <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.54022986">
+              <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4152#4153#0" expanded="true" />
+                <element signature="e#4190#4191#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,18 +64,19 @@
         <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Historial.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-              <folding />
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#402#410#0" expanded="true" />
+                <element signature="e#478#486#0" expanded="true" />
+                <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+                <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+                <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+                <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+                <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+                <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+                <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,11 +108,12 @@
         <option value="$PROJECT_DIR$/src/Controlador/Gestor.java" />
         <option value="$PROJECT_DIR$/src/Inicio/Gestor.java" />
         <option value="$PROJECT_DIR$/src/Inicio/Vista/Action.java" />
-        <option value="$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java" />
         <option value="$PROJECT_DIR$/src/Propio" />
         <option value="$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt" />
-        <option value="$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java" />
+        <option value="$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java" />
         <option value="$PROJECT_DIR$/src/Inicio/Vista/Ventana.java" />
+        <option value="$PROJECT_DIR$/src/Inicio/Modelo/Matias-Miguel.txt" />
+        <option value="$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java" />
       </list>
     </option>
   </component>
@@ -149,7 +148,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,6 +266,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
@@ -455,11 +454,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25373134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25373134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20411664" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24957119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -475,10 +474,281 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Vista/Ventana.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#410#0" expanded="true" />
+            <element signature="e#478#486#0" expanded="true" />
+            <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+            <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+            <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+            <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Vista/Ventana.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#410#0" expanded="true" />
+            <element signature="e#478#486#0" expanded="true" />
+            <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+            <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+            <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+            <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Vista/Ventana.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#410#0" expanded="true" />
+            <element signature="e#478#486#0" expanded="true" />
+            <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+            <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+            <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+            <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Vista/Ventana.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#410#0" expanded="true" />
+            <element signature="e#478#486#0" expanded="true" />
+            <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+            <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+            <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+            <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Vista/Ventana.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#410#0" expanded="true" />
+            <element signature="e#478#486#0" expanded="true" />
+            <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+            <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+            <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+            <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Inicio/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -511,6 +781,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -519,7 +791,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#410#0" expanded="true" />
+            <element signature="e#478#486#0" expanded="true" />
+            <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+            <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+            <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+            <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -555,6 +838,8 @@
           <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -563,7 +848,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#410#0" expanded="true" />
+            <element signature="e#478#486#0" expanded="true" />
+            <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+            <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+            <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+            <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -607,6 +903,8 @@
           <caret line="21" column="16" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -615,7 +913,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#410#0" expanded="true" />
+            <element signature="e#478#486#0" expanded="true" />
+            <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+            <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+            <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+            <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -623,22 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.028735632">
           <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,10 +943,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Matias-Miguel.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Historial.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio/Modelo/Partidas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#410#0" expanded="true" />
+            <element signature="e#478#486#0" expanded="true" />
+            <element signature="method#convertirHistorialEnArray#0;class#Partidas#0" expanded="false" />
+            <element signature="method#convertirArrayEnHistorial#0;class#Partidas#0" expanded="false" />
+            <element signature="method#leer#0;class#Partidas#0" expanded="false" />
+            <element signature="method#escribir#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setRadioSeleccionadoCalculo#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ2#0;class#Partidas#0" expanded="false" />
+            <element signature="method#setPuntosAcumuladosJ1#0;class#Partidas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Inicio/Controlador/Gestor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -662,10 +990,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Inicio/Vista/Ventana.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5804597">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.54022986">
+          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
           </folding>
         </state>
       </provider>
